@@ -10,6 +10,8 @@ namespace ScoolBook.forms
     {
         private readonly BookService _bookService = new BookService();
         private readonly ImageHandler _imageHandler = new ImageHandler();
+        private JsonBook _book = new JsonBook();
+        private ArchiveBooks _archiveBooks = new ArchiveBooks();
         public MainPage()
         {
             InitializeComponent();
@@ -24,6 +26,8 @@ namespace ScoolBook.forms
         {
             string filePath = _bookService.CopyBook(sender, e);
             _imageHandler.CreateImageFromBook(filePath);
+            _book.CreateJsonFile(filePath, null);
+            _archiveBooks.Archive(filePath);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace ScoolBook.Handlers
 
             // Папка для сохранения изображения
             string outputDirectory = Path.GetDirectoryName(pdfFilePath);
-            string outputImagePath = Path.Combine(outputDirectory, $"{Path.GetFileNameWithoutExtension(pdfFilePath)}_Page1.png");
+            string outputImagePath = Path.Combine(outputDirectory, "Cover.png");
 
             using (var rasterizer = new GhostscriptRasterizer())
             {
