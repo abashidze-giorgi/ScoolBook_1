@@ -51,8 +51,9 @@
             this.btn_lets_learn.Name = "btn_lets_learn";
             this.btn_lets_learn.Size = new System.Drawing.Size(136, 44);
             this.btn_lets_learn.TabIndex = 1;
-            this.btn_lets_learn.Text = "button1";
+            this.btn_lets_learn.Text = "ვისწავლოთ";
             this.btn_lets_learn.UseVisualStyleBackColor = true;
+            this.btn_lets_learn.Click += new System.EventHandler(this.btn_lets_learn_Click);
             // 
             // button2
             // 
@@ -81,7 +82,7 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,7 +92,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_lets_learn);
             this.Controls.Add(this.btn_add_book);
-            this.Name = "Form1";
+            this.Name = "MainPage";
             this.RightToLeftLayout = true;
             this.Text = "სკოლის წიგნი";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

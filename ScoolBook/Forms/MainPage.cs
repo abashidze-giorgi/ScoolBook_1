@@ -25,9 +25,19 @@ namespace ScoolBook.forms
         private void btn_add_book_Click(object sender, EventArgs e)
         {
             string filePath = _bookService.CopyBook(sender, e);
+            if (filePath  == null)
+            {
+                return;
+            }
             _imageHandler.CreateImageFromBook(filePath);
             _book.CreateJsonFile(filePath, null);
             _archiveBooks.Archive(filePath);
+        }
+
+        private void btn_lets_learn_Click(object sender, EventArgs e)
+        {
+            LetsLearn form = new LetsLearn();
+            form.Show();
         }
     }
 }

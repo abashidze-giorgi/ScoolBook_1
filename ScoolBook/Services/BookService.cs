@@ -90,6 +90,10 @@ namespace ScoolBook.Services
 
                 MessageBox.Show("Книга успешно добавлена!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                return null;
+            }
 
             return destinationFilePath;
         }
